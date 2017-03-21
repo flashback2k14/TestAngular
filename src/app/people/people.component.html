@@ -1,0 +1,13 @@
+<p>
+  people works!
+</p>
+
+<button *ngIf="!isAddingNewPerson" (click)="isAddingNewPerson=!isAddingNewPerson">Hinzufuegen</button>
+
+<new-person *ngIf="isAddingNewPerson" 
+            (onSubmitted)="onSubmit($event)" 
+            (onCancelled)="onCancel()"></new-person>
+
+<hr>
+
+<profile [person]="person" *ngFor="let person of people"></profile>

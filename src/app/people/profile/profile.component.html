@@ -1,0 +1,19 @@
+<div class="user-profile">
+  <div class="avatar">
+    <img src="" alt="">
+  </div>
+  <div class="profile">
+    <span>
+      <strong>{{ person.name }}</strong>
+      <i>{{ person.status }}</i>
+    </span>
+    <span *ngIf="person.website">
+      <a href="{{ person.website.url }}">{{ person.website.name }}</a>
+    </span>
+    <span *ngIf="person.email">
+      <a href="{{ person.email.url }}">{{ person.email.name }}</a>
+    </span>
+    <br>
+
+  </div>
+</div>

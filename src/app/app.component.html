@@ -1,0 +1,25 @@
+<app-sidebar  (toggleSidebar)="ToggleSidebar($event)" [@slideInOut]="_sidebarState"></app-sidebar>
+
+<app-header (toggleSidebar)="ToggleSidebar($event)"></app-header>
+
+<app-people></app-people>
+
+<!--<app-menubutton (buttonToggled)="ToggleSidebar($event)"></app-menubutton>-->
+
+<div class="blubb">
+
+    <input type="text" [(ngModel)]="title" />
+    <!--<input type="text" [value]="title" (input)="title = $event.target.value"  />
+    <input type="text" bindon-ngModel="title" />-->
+    <input type="button" value="clear" (click)="title = ''"/>
+    <p>{{title}} </p>
+
+    <br>
+
+    <input type="button" value="count" (click)="RaiseCount()" />
+    <p>{{_currentCount}} </p>
+
+</div>
+
+
+
