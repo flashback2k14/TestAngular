@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { PeopleService } from './people.service';
+import { Component, OnInit } from "@angular/core";
+import { PeopleService } from "./people.service";
 
 @Component({
-  selector: 'app-people',
-  templateUrl: './people.component.html',
-  styleUrls: ['./people.component.css']
+  selector: "app-people",
+  templateUrl: "./people.component.html",
+  styleUrls: ["./people.component.css"]
 })
 export class PeopleComponent implements OnInit {
 
-  isAddingNewPerson:boolean = false;
-  people = [];
+  private isAddingNewPerson: boolean = false;
+  
+  private people = [];
 
   constructor(private peopleService: PeopleService) { }
 
@@ -20,13 +21,12 @@ export class PeopleComponent implements OnInit {
     //   });
   }
 
-  onSubmit(newPerson){
+  onSubmit(newPerson) {
     this.people.push(newPerson);
     this.isAddingNewPerson = false;
   }
 
-  onCancel(){
+  onCancel() {
     this.isAddingNewPerson = false;
   }
-
 }

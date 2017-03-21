@@ -1,13 +1,9 @@
-import { Component, 
-         OnInit,          
-         EventEmitter,
-         Input, 
-         Output } from '@angular/core';
+import {
+  Component, OnInit, EventEmitter, Input, Output
+} from "@angular/core";
 
 @Component({
-  selector: 'app-menubutton',
-  // templateUrl: './menubutton.component.html',
-  // styleUrls: ['./menubutton.component.css'],
+  selector: "app-menubutton",
   styles:[`
     .menuButton{
       background-color: #2354ee;;
@@ -85,22 +81,16 @@ import { Component,
 })
 export class MenubuttonComponent implements OnInit {
 
-  constructor() { }
+  private _isOpen: boolean = false;
 
   @Output() buttonToggled: EventEmitter<any> = new EventEmitter();
-  
 
-  ngOnInit() {
-  }
+  constructor() { }
 
-private _isOpen: boolean = false;
+  ngOnInit() { }
 
   private ToggleButton() {
-       
-       this._isOpen = !this._isOpen;
-           
-       this.buttonToggled.emit(this._isOpen);      
-
+    this._isOpen = !this._isOpen;
+    this.buttonToggled.emit(this._isOpen);
   }
-
 }

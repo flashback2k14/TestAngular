@@ -1,10 +1,10 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { FormGroup } from "@angular/forms";
 
 @Component({
-  selector: 'new-person',
-  templateUrl: './new-person.component.html',
-  styleUrls: ['./new-person.component.css']
+  selector: "new-person",
+  templateUrl: "./new-person.component.html",
+  styleUrls: ["./new-person.component.css"]
 })
 export class NewPersonComponent implements OnInit {
 
@@ -14,16 +14,14 @@ export class NewPersonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
   
-  onSubmit(newPerson){
+  onSubmit(newPerson) {
     this.onSubmitted.emit(newPerson);
   }
 
-  onCancel(event){
+  onCancel(event) {
     event.preventDefault();
     this.onCancelled.emit();
   }
-
 }

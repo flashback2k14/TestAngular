@@ -1,13 +1,12 @@
 h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
 .container {
-    background-color: #f00;
+  background-color: #f00;
 }
 
-
 .header{
-    margin-left: 55px;
-    padding-left: 55px;
-    background-color:  #2354ee;
+  margin-left: 55px;
+  padding-left: 55px;
+  background-color:  #2354ee;
 }
