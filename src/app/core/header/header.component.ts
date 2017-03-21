@@ -9,8 +9,8 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
-  private websitename = "hicode.de";
-  
+  websitename = "hicode.de";
+
   constructor() { }
 
   ngOnInit() { }

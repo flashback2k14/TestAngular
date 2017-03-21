@@ -4,9 +4,9 @@ import {
 
 @Component({
   selector: "app-menubutton",
-  styles:[`
-    .menuButton{
-      background-color: #2354ee;;
+  styles: [`
+    .menuButton {
+      background-color: #2354ee;
       width: 40px;
       height: 40px;
       position: relative;
@@ -24,7 +24,7 @@ import {
       cursor: pointer;
     }
 
-    .menuButton span{
+    .menuButton span {
       position: absolute;
       background-color: #eef;
       height: 6px;
@@ -71,7 +71,7 @@ import {
     } 
   `],
   template: `
-    <div class="menuButton" [class.Open]="_isOpen" (click)="ToggleButton()">
+    <div class="menuButton" [class.Open]="_isOpen" (click)="toggleButton()">
       <span></span>
       <span></span>
       <span></span>
@@ -81,7 +81,7 @@ import {
 })
 export class MenubuttonComponent implements OnInit {
 
-  private _isOpen: boolean = false;
+  _isOpen = false;
 
   @Output() buttonToggled: EventEmitter<any> = new EventEmitter();
 
@@ -89,7 +89,7 @@ export class MenubuttonComponent implements OnInit {
 
   ngOnInit() { }
 
-  private ToggleButton() {
+  toggleButton() {
     this._isOpen = !this._isOpen;
     this.buttonToggled.emit(this._isOpen);
   }

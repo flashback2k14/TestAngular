@@ -7,7 +7,7 @@ export class PeopleService {
 
   constructor(private http: Http) { }
 
-  getPeople(){
+  getPeople() {
      return this.http
        .get("/assets/people.json")
        .map(res => res.json());

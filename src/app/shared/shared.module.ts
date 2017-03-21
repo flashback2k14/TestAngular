@@ -9,6 +9,4 @@ import { MenubuttonComponent } from "./controls/menubutton/menubutton.component"
   declarations: [MenubuttonComponent],
   exports: [MenubuttonComponent, CommonModule]
 })
-export class SharedModule {
-
-}
+export class SharedModule { }

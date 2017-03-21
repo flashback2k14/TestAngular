@@ -13,8 +13,8 @@ import { PeopleService } from "./people.service";
   imports: [CommonModule, FormsModule],
   exports: [PeopleComponent],
   declarations: [
-    PeopleComponent, 
-    ProfileComponent, 
+    PeopleComponent,
+    ProfileComponent,
     NewPersonComponent
   ],
   providers: [PeopleService]

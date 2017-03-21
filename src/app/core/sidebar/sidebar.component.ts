@@ -9,15 +9,15 @@ import {
 })
 export class SidebarComponent implements OnInit {
 
-  private _isSidebarOpen: boolean = false;
+  private _isSidebarOpen = false;
 
   @Output() toggleSidebar: EventEmitter<any> = new EventEmitter();
-  
+
   constructor() { }
 
   ngOnInit() { }
 
-  private ToggleSidebar() {
+  _toggleSidebar() {
     this._isSidebarOpen = !this._isSidebarOpen;
     this.toggleSidebar.emit(this._isSidebarOpen);
   }

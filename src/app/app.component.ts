@@ -19,17 +19,18 @@ import { Component, trigger, state, style, transition, animate, AnimationTransit
 })
 export class AppComponent {
 
-  private title = "app works!";
+  title = "app works!";
 
-  private _sidebarState: string = "out";
+  _sidebarState = "out";
 
-  private _currentCount: number = 0;
+  _currentCount = 0;
 
-  private toggleSidebar() {
+  toggleSidebar() {
     // 1-line if statement that toggles the value:
     this._sidebarState = this._sidebarState === "out" ? "in" : "out";
   }
-  private raiseCount() {
+
+  raiseCount() {
     // this._currentCount += 1;
     this._currentCount++;
     console.log("test");

@@ -4,7 +4,7 @@ import { NewPersonComponent } from "./new-person.component";
 
 describe("Component: NewPerson", () => {
   it("should create an instance", () => {
-    let component = new NewPersonComponent();
+    const component = new NewPersonComponent();
     expect(component).toBeTruthy();
   });
 });

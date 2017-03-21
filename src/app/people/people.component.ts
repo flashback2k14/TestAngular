@@ -8,8 +8,8 @@ import { PeopleService } from "./people.service";
 })
 export class PeopleComponent implements OnInit {
 
-  private isAddingNewPerson: boolean = false;
-  
+  isAddingNewPerson = false;
+
   private people = [];
 
   constructor(private peopleService: PeopleService) { }
