@@ -1,7 +1,6 @@
-import { Component, 
-         trigger, 
-         state, 
-         OnInit } from '@angular/core';
+import {
+  Component, trigger, state, OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,13 +9,10 @@ import { Component,
 })
 export class HeaderComponent implements OnInit {
 
-
   websitename = 'hicode.de';
   
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 
 }
