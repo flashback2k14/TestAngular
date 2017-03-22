@@ -4,10 +4,11 @@
 
 <button *ngIf="!isAddingNewPerson" (click)="isAddingNewPerson=!isAddingNewPerson">Hinzufuegen</button>
 
-<new-person *ngIf="isAddingNewPerson" 
-            (onSubmitted)="onSubmit($event)" 
-            (onCancelled)="onCancel()"></new-person>
+<app-new-person *ngIf="isAddingNewPerson" 
+  (onSubmitted)="onSubmit($event)" 
+  (onCancelled)="onCancel()">
+</app-new-person>
 
 <hr>
 
-<profile [person]="person" *ngFor="let person of people"></profile>
+<app-profile [person]="person" *ngFor="let person of people"></app-profile>

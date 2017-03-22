@@ -1,6 +1,6 @@
-<app-sidebar  (toggleSidebar)="ToggleSidebar($event)" [@slideInOut]="_sidebarState"></app-sidebar>
+<app-sidebar  (toggleSidebar)="toggleSidebar($event)" [@slideInOut]="_sidebarState"></app-sidebar>
 
-<app-header (toggleSidebar)="ToggleSidebar($event)"></app-header>
+<app-header (toggleSidebar)="toggleSidebar($event)"></app-header>
 
 <app-people></app-people>
 
@@ -8,18 +8,15 @@
 
 <div class="blubb">
 
-    <input type="text" [(ngModel)]="title" />
-    <!--<input type="text" [value]="title" (input)="title = $event.target.value"  />
-    <input type="text" bindon-ngModel="title" />-->
-    <input type="button" value="clear" (click)="title = ''"/>
-    <p>{{title}} </p>
+  <input type="text" [(ngModel)]="title" />
+  <!--<input type="text" [value]="title" (input)="title = $event.target.value"  />
+  <input type="text" bindon-ngModel="title" />-->
+  <input type="button" value="clear" (click)="title = ''"/>
+  <p>{{title}} </p>
 
-    <br>
+  <br>
 
-    <input type="button" value="count" (click)="RaiseCount()" />
-    <p>{{_currentCount}} </p>
+  <input type="button" value="count" (click)="raiseCount()" />
+  <p>{{_currentCount}}</p>
 
 </div>
-
-
-
