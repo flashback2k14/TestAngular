@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderModule } from './header/header.module';
 import { PeopleModule } from './people/people.module';
 import { MenubuttonModule } from './controls/menubutton/menubutton.module';
+import { MainModule } from './main/main.Module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MenubuttonModule } from './controls/menubutton/menubutton.module';
     HttpModule,
     PeopleModule,
     HeaderModule,
-    MenubuttonModule
+    MenubuttonModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

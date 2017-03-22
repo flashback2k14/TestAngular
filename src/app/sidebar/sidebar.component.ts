@@ -1,4 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, 
+         OnInit, 
+         Output, 
+         EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,13 +15,13 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Output() toggleSidebar: EventEmitter<any> = new EventEmitter();
+ @Output() toggleSidebar: EventEmitter<any> = new EventEmitter();
  private _isSidebarOpen: boolean = false;
 
   private ToggleSidebar() {
        
        this._isSidebarOpen = !this._isSidebarOpen;
-           
+        
        this.toggleSidebar.emit(this._isSidebarOpen);      
 
   }
