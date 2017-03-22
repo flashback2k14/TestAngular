@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MenubuttonComponent } from './menubutton.component';
+import { MenubuttonComponent } from "./menubutton.component";
 
-describe('MenubuttonComponent', () => {
+describe("MenubuttonComponent", () => {
   let component: MenubuttonComponent;
   let fixture: ComponentFixture<MenubuttonComponent>;
 
@@ -19,7 +19,7 @@ describe('MenubuttonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
