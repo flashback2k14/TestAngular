@@ -4,14 +4,27 @@ import { NgModule } from "@angular/core";
 import { Optional, SkipSelf } from "@angular/core";
 // Own Modules
 import { SharedModule } from "./../shared/shared.module";
+import { PeopleModule } from "./../people/people.module";
 // Own Components
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { HeaderComponent } from "./header/header.component";
+import { MainComponent } from "./main/main.component";
 
 @NgModule({
-  imports: [SharedModule],
-  declarations: [HeaderComponent, SidebarComponent],
-  exports: [HeaderComponent, SidebarComponent]
+  imports: [
+    SharedModule,
+    PeopleModule
+  ],
+  declarations: [
+    HeaderComponent,
+    SidebarComponent,
+    MainComponent
+  ],
+  exports: [
+    HeaderComponent,
+    SidebarComponent,
+    MainComponent
+  ]
 })
 export class CoreModule {
 

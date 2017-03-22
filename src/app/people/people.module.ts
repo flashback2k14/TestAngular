@@ -11,8 +11,12 @@ import { PeopleService } from "./people.service";
 
 @NgModule({
   imports: [CommonModule, FormsModule],
-  exports: [PeopleComponent],
   declarations: [
+    PeopleComponent,
+    ProfileComponent,
+    NewPersonComponent
+  ],
+  exports: [
     PeopleComponent,
     ProfileComponent,
     NewPersonComponent
