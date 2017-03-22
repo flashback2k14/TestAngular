@@ -6,7 +6,6 @@ import { HttpModule } from "@angular/http";
 // Own Modules
 import { CoreModule } from "./core/core.module";
 import { PeopleModule } from "./people/people.module";
-import { MainModule } from './main/main.Module';
 // Own Components
 import { AppComponent } from "./app.component";
 
@@ -16,8 +15,7 @@ import { AppComponent } from "./app.component";
     FormsModule,
     HttpModule,
     CoreModule,
-    PeopleModule,
-    MainModule
+    PeopleModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
