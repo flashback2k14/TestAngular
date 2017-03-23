@@ -1,7 +1,5 @@
-<app-sidebar  
-  (toggleSidebar)="toggleSidebar($event)" 
-  [@slideInOutSidebar]="sidebarState">
-    <app-menubutton (buttonToggled)="toggleSidebar($event)"></app-menubutton>
+<app-sidebar [@slideInOutSidebar]="sidebarState">
+  <app-menubutton (buttonToggled)="toggleSidebar($event)"></app-menubutton>
 </app-sidebar>
 
 <app-main [sidebarState]="sidebarState">
