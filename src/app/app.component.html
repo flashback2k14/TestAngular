@@ -1,27 +1,10 @@
 <app-sidebar  
-    (toggleSidebar)="toggleSidebar($event)" 
-    [@slideInOutSidebar]="sidebarState">
+  (toggleSidebar)="toggleSidebar($event)" 
+  [@slideInOutSidebar]="sidebarState">
+    <app-menubutton (buttonToggled)="toggleSidebar($event)"></app-menubutton>
 </app-sidebar>
 
-<app-main [sidebarState]="post.sidebarState"></app-main>
-
-<!--<app-header></app-header>
-
-<app-people></app-people>-->
-
-
-<!--<div class="blubb">
-
-  <input type="button" value="clear" (click)="title = ''"/>
-  <input type="text" [(ngModel)]="title" />
-  <input type="text" [value]="title" (input)="title = $event.target.value"  />
-  <input type="text" bindon-ngModel="title" />
-  <p>{{title}} </p> 
-
-  <br>
-
-  <input type="button" value="count" (click)="raiseCount()" />
-  <p>{{_currentCount}}</p>
-
-</div>-->
-
+<app-main [sidebarState]="sidebarState">
+  <app-header></app-header>
+  <app-people></app-people>
+</app-main>

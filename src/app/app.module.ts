@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 // Own Modules
 import { CoreModule } from "./core/core.module";
+import { SharedModule } from "./shared/shared.module";
 import { PeopleModule } from "./people/people.module";
 // Own Components
 import { AppComponent } from "./app.component";
@@ -15,6 +16,7 @@ import { AppComponent } from "./app.component";
     FormsModule,
     HttpModule,
     CoreModule,
+    SharedModule,
     PeopleModule
   ],
   declarations: [AppComponent],

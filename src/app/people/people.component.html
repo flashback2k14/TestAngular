@@ -1,14 +1,18 @@
-<p>
-  people works!
-</p>
+<div class="people-container">
+  <p>
+    people works!
+  </p>
 
-<button *ngIf="!isAddingNewPerson" (click)="isAddingNewPerson=!isAddingNewPerson">Hinzufuegen</button>
+  <button *ngIf="!isAddingNewPerson" (click)="isAddingNewPerson=!isAddingNewPerson">Hinzufuegen</button>
 
-<app-new-person *ngIf="isAddingNewPerson" 
-  (onSubmitted)="onSubmit($event)" 
-  (onCancelled)="onCancel()">
-</app-new-person>
+  <app-new-person *ngIf="isAddingNewPerson" 
+    (onSubmitted)="onSubmit($event)" 
+    (onCancelled)="onCancel()">
+  </app-new-person>
 
-<hr>
+  <hr>
 
-<app-profile [person]="person" *ngFor="let person of people"></app-profile>
+  <app-profile *ngFor="let person of people"
+    [person]="person">
+  </app-profile>
+</div>
