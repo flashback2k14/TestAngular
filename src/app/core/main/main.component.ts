@@ -15,10 +15,10 @@ import { Component,
   animations: [
     trigger('slideInOutMain', [
       state('in', style({
-        marginLeft: '250px'
+        transform: 'translate3d(250px, 0, 0)'
       })),
       state('out', style({
-        marginLeft: '50px'
+        transform: "translate3d(50px, 0, 0)"
       })),
       transition('in => out', animate('200ms ease-in-out')),
       transition('out => in', animate('200ms ease-in-out'))
@@ -28,14 +28,9 @@ import { Component,
 
 export class MainComponent implements OnInit {
 
+  @Input() sidebarState: string = 'in';
+
   constructor() { }
- 
-  // private _sidebarState: string = 'out';
 
-  @Input() sidebarState: string = 'in'
-
-  ngOnInit() {
-   
-  }
-
+  ngOnInit() { }
 }

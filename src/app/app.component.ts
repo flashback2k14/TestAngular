@@ -1,4 +1,3 @@
-
 import { Component, 
          trigger,
          state, 
@@ -25,26 +24,16 @@ import { Component,
   ]
 })
 export class AppComponent {
-
-  post = {
-    sidebarState:'out',
-    title: 'app works!'
-  }
-
-  title = 'app works!';
-
-  private sidebarState: string = 'out';
+  
+  sidebarState = 'out';
 
   _currentCount = 0;
 
-  private toggleSidebar() {
-    // 1-line if statement that toggles the value:
-   this.sidebarState = this.sidebarState === 'out' ? 'in' : 'out';
-   this.post.sidebarState = this.sidebarState
+  toggleSidebar() {
+    this.sidebarState = this.sidebarState === 'out' ? 'in' : 'out';
   }
 
   raiseCount() {
-    // this._currentCount += 1;
     this._currentCount++;
     console.log("test");
   }
